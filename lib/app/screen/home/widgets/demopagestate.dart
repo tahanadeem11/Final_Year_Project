@@ -8,16 +8,32 @@ import 'package:labquest/app/screen/report/report.dart';
 import 'package:labquest/controller/homecontroller.dart';
 import 'package:labquest/model/task.dart';
 
-import '../../chatGPT/ChatScreen.dart';
+import '../../chatGPT/ImageUploadScreen.dart';
 import '../../chatGPT/ImageGenerator Screen.dart';
 import '../../chatGPT/chatGPT.dart';
 
 class Demopagestate extends StatelessWidget {
   Demopagestate({Key? key}) : super(key: key);
   var control=Get.find<Homecontroller>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title:  Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,top: 5.0.wp),
+              child: Icon(Icons.list_alt_rounded,color:Colors.deepPurple,size: 35,),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,right: 4.0.wp,top: 4.0.wp),
+              child: Text('Hello User',style: Theme.of(context).textTheme.headlineMedium,),
+            ),
+          ],),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       floatingActionButton: DragTarget<Task>(
 
         builder:(_,__,___){
@@ -52,16 +68,23 @@ class Demopagestate extends StatelessWidget {
             children: [
             Padding(
               padding: EdgeInsets.only(right: 10.0.wp),
-              child: IconButton(onPressed: (){control.changemypage(0);}, icon: Icon(Icons.list_alt_rounded,color: Colors.white,size: 30,)),
+              child: IconButton(onPressed: (){control.changemypage(0);
+              print(control);
+                }, icon: Icon(Icons.list_alt_rounded,color: Colors.white,size: 30,)),
             ),
             Padding(
               padding: EdgeInsets.only(left: 10.0.wp),
-              child: IconButton(onPressed: (){control.changemypage(1);}, icon: Icon(Icons.data_saver_off_rounded,color: Colors.white,size: 30)),
+              child: IconButton(onPressed: (){control.changemypage(1);
+                print(control);
+
+                }, icon: Icon(Icons.data_saver_off_rounded,color: Colors.white,size: 30)),
             ),
 
               Padding(
                 padding: EdgeInsets.only(left: 10.0.wp),
-                child: IconButton(onPressed: (){control.changemypage(2);}, icon: Icon(Icons.chat,color: Colors.white,size: 30)),
+                child: IconButton(onPressed: (){control.changemypage(2);
+                print(control);
+                  }, icon: Icon(Icons.chat,color: Colors.white,size: 30)),
               ),
           ],)
           ),

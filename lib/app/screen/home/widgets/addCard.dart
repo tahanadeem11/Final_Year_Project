@@ -25,7 +25,7 @@ class AddCard extends StatelessWidget {
             titlePadding: EdgeInsets.symmetric(vertical: 5.0.wp),
             radius: 5,
             title: 'Task Type',
-            titleStyle:Theme.of(context).textTheme.headline5,
+            titleStyle:Theme.of(context).textTheme.headlineSmall,
             content: Form(
               key: homecontrol.formkey,
               child: Column(
@@ -37,7 +37,7 @@ class AddCard extends StatelessWidget {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                         labelText: 'Title',
-                        labelStyle: Theme.of(context).textTheme.headline2,
+                        labelStyle: Theme.of(context).textTheme.displayMedium,
                       ),
                       validator: (value){
                         if(value==null||value.trim().isEmpty){

@@ -20,17 +20,7 @@ class Home extends GetView<Homecontroller> {
       body: SafeArea(child: 
       ListView(
         children: [
-          Row(
-                children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,top: 5.0.wp),
-                  child: Icon(Icons.list_alt_rounded,color:Colors.deepPurple,size: 35,),
-                ),
-                 Padding(
-                padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,right: 4.0.wp,top: 4.0.wp),
-                child: Text('My List',style: Theme.of(context).textTheme.headline4,),
-              ),
-              ],),
+
 
           Obx((){
             var createdTasks = control.getTotalTask();
@@ -104,8 +94,8 @@ class Home extends GetView<Homecontroller> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("$number",style: Theme.of(context).textTheme.headline6,),
-            Text(title,style: Theme.of(context).textTheme.headline2,)
+            Text("$number",style: Theme.of(context).textTheme.titleLarge,),
+            Text(title,style: Theme.of(context).textTheme.displayMedium,)
 
           ],
         )

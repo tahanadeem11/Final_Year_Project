@@ -65,9 +65,9 @@ class TaskCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(task.title,style: Theme.of(context).textTheme.headline5,),
+                  Text(task.title,style: Theme.of(context).textTheme.headlineSmall,),
                   SizedBox(height: 1.0.wp,),
-                  Text('${task.todos?.length??0} Task',style: Theme.of(context).textTheme.headline2,)
+                  Text('${task.todos?.length??0} Task',style: Theme.of(context).textTheme.displayMedium,)
     
                 ],
               ),

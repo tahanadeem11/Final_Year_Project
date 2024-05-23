@@ -15,7 +15,7 @@ class DoneList extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(vertical: 2.0.wp,horizontal:5.0.wp),
-          child: Text('Completed (${control.doneTodos.length})',style: Theme.of(context).textTheme.headline2,),
+          child: Text('Completed (${control.doneTodos.length})',style: Theme.of(context).textTheme.displayMedium,),
         ),
         ...control.doneTodos.map((element) => Dismissible(
           key: ObjectKey(element),
@@ -50,7 +50,7 @@ class DoneList extends StatelessWidget {
                     child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             physics: const BouncingScrollPhysics(),
-                      child: Text(element['title'],style: Theme.of(context).textTheme.headline2,)),
+                      child: Text(element['title'],style: Theme.of(context).textTheme.displayMedium,)),
                   ),
                 )
               ],

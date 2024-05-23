@@ -54,7 +54,7 @@ class AddDialog extends StatelessWidget {
                         }
                       }
                     },
-                    child: Text("Done",style: Theme.of(context).textTheme.button,),
+                    child: Text("Done",style: Theme.of(context).textTheme.labelLarge,),
                   ),
                   ],
                   
@@ -62,7 +62,7 @@ class AddDialog extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5.0.wp),
-                child: Text("New Task",style: Theme.of(context).textTheme.headline4,),
+                child: Text("New Task",style: Theme.of(context).textTheme.headlineMedium,),
               ),
                Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5.0.wp,vertical: 5.0.wp),
@@ -71,7 +71,7 @@ class AddDialog extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                             labelText: 'Add To-Do',
-                            labelStyle: Theme.of(context).textTheme.headline2,
+                            labelStyle: Theme.of(context).textTheme.displayMedium,
                           ),
                           validator: (value){
                             if(value==null||value.trim().isEmpty){
@@ -83,7 +83,7 @@ class AddDialog extends StatelessWidget {
                ),
                Padding(
                  padding:  EdgeInsets.all(5.0.wp),
-                 child: Text("Add to",style: Theme.of(context).textTheme.headline2),
+                 child: Text("Add to",style: Theme.of(context).textTheme.displayMedium),
                ),
                ...control.tasks.map((element) => Obx(()=>
                 InkWell(
@@ -101,7 +101,7 @@ class AddDialog extends StatelessWidget {
                           ),
                           color: HexColor.fromHex(element.color),),
                           SizedBox(width: 3.0.wp),
-                          Text(element.title,style: Theme.of(context).textTheme.headline5,),
+                          Text(element.title,style: Theme.of(context).textTheme.headlineSmall,),
                           ],
                         ),
                           if(control.task.value==element)

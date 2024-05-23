@@ -20,21 +20,21 @@ class Report extends StatelessWidget {
           var precent=(completedTasks/createdTasks *100).toStringAsFixed(0);
           return ListView(
             children: [
-              Row(
-                children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,top: 5.0.wp),
-                  child: const Icon(Icons.data_saver_off_rounded,color:Colors.deepPurple,size: 35,),
-                ),
-                 Padding(
-                padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,right: 4.0.wp,top: 4.0.wp),
-                child: Text('My Report',style: Theme.of(context).textTheme.headline4,),
-              ),
-              ],),
-             
+              // Row(
+              //   children: [
+              //   Padding(
+              //     padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,top: 5.0.wp),
+              //     child: const Icon(Icons.data_saver_off_rounded,color:Colors.deepPurple,size: 35,),
+              //   ),
+              //    Padding(
+              //   padding: EdgeInsets.only(left: 4.0.wp,bottom: 2.0.wp,right: 4.0.wp,top: 4.0.wp),
+              //   child: Text('My Report',style: Theme.of(context).textTheme.headlineMedium,),
+              // ),
+              // ],),
+              //
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 4.0.wp),
-                child: Text(DateFormat.yMMMd().format(DateTime.now()),style: Theme.of(context).textTheme.headline2),
+                padding: EdgeInsets.symmetric(horizontal: 4.0.wp, vertical: 2.0.wp),
+                child: Text(DateFormat.yMMMd().format(DateTime.now()),style: Theme.of(context).textTheme.displayMedium),
               ),
               Padding(
                 padding:  EdgeInsets.symmetric(vertical: 4.0.wp,horizontal: 4.0.wp),
@@ -70,9 +70,9 @@ class Report extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('${createdTasks==0?0:precent} %',style: Theme.of(context).textTheme.headline4,),
+                        Text('${createdTasks==0?0:precent} %',style: Theme.of(context).textTheme.headlineMedium,),
                         SizedBox(height: 1.0.wp,),
-                        Text("Efficiency",style: Theme.of(context).textTheme.headline2,)
+                        Text("Efficiency",style: Theme.of(context).textTheme.displayMedium,)
                       ],
                     ),
                   ),
@@ -103,8 +103,8 @@ class Report extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("$number",style: Theme.of(context).textTheme.headline6,),
-            Text(title,style: Theme.of(context).textTheme.headline2,)
+            Text("$number",style: Theme.of(context).textTheme.headlineSmall,),
+            Text(title,style: Theme.of(context).textTheme.displayMedium,)
 
           ],
         )

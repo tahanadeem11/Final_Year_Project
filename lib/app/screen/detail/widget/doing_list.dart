@@ -10,7 +10,7 @@ class DoingList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(()=>control.doingTodos.isEmpty && control.doneTodos.isEmpty?Column(children: [
       Image.asset('assets/notasks.png',fit: BoxFit.cover,width: 65.0.wp,),
-      Text('Add Task',style:Theme.of(context).textTheme.headline4)
+      Text('Add Task',style:Theme.of(context).textTheme.headlineMedium)
     ],):ListView(
       shrinkWrap: true,
       physics: const ClampingScrollPhysics(),
@@ -39,7 +39,7 @@ class DoingList extends StatelessWidget {
                     child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             physics: const BouncingScrollPhysics(),
-                      child: Text(element['title'],style: Theme.of(context).textTheme.headline6,)),
+                      child: Text(element['title'],style: Theme.of(context).textTheme.titleLarge,)),
                   ),
                 )
             ],

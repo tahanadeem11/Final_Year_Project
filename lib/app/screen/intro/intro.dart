@@ -26,9 +26,9 @@ class Intro extends StatelessWidget {
                         children: [
                           Image(image: AssetImage(introdata.contents[index].imageName??""),width: 340,height: 340,),
                           SizedBox(height: 10.0.hp,),
-                          Text(introdata.contents[index].title??"",style: Theme.of(context).textTheme.headline1,),
+                          Text(introdata.contents[index].title??"",style: Theme.of(context).textTheme.displayLarge,),
                           SizedBox(height: 1.0.hp,),
-                          Text(introdata.contents[index].description??"",style: Theme.of(context).textTheme.headline2,textAlign: TextAlign.center,)
+                          Text(introdata.contents[index].description??"",style: Theme.of(context).textTheme.displayMedium,textAlign: TextAlign.center,)
                           
                         ],
                       ),
@@ -71,7 +71,7 @@ class Intro extends StatelessWidget {
                       onPressed: (){
                         
                       introdata.actionbutton();
-                    }, child: Text(introdata.currentIndex.value==introdata.contents.length-1?"Continue":"Next",style:Theme.of(context).textTheme.headline3,)),
+                    }, child: Text(introdata.currentIndex.value==introdata.contents.length-1?"Continue":"Next",style:Theme.of(context).textTheme.displaySmall,)),
                   );
                 }
                   

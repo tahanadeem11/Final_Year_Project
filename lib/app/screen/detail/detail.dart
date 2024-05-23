@@ -48,7 +48,7 @@ class DetailPage extends StatelessWidget {
                       child: Icon(IconData(task.icon,fontFamily: 'MaterialIcons',),color: color,size: 35),
                     ),
                     SizedBox(width: 3.0.wp,),
-                    Text(task.title,style: Theme.of(context).textTheme.headline4,)
+                    Text(task.title,style: Theme.of(context).textTheme.headlineMedium,)
                   ],
                 ),
               ),
@@ -58,7 +58,7 @@ class DetailPage extends StatelessWidget {
                   padding: EdgeInsets.only(left: 16.0.wp,top: 6.0.wp,bottom:  6.0.wp,right: 16.0.wp),
                   child: Row(
                     children: [
-                      Text("$totalTodos Tasks",style: Theme.of(context).textTheme.headline2,),
+                      Text("$totalTodos Tasks",style: Theme.of(context).textTheme.displayMedium,),
                       SizedBox(width: 3.0.wp,),
                       Expanded(child: StepProgressIndicator(
                         totalSteps: totalTodos==0?1:totalTodos,
