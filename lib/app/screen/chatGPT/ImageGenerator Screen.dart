@@ -36,8 +36,6 @@ class _ChatScreenState extends State<ChatScreen> {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer """"',
         },
-
-
         body: requestBodyJson,
       );
 
