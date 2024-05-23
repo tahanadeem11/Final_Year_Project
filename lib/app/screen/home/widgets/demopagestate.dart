@@ -8,6 +8,10 @@ import 'package:labquest/app/screen/report/report.dart';
 import 'package:labquest/controller/homecontroller.dart';
 import 'package:labquest/model/task.dart';
 
+import '../../chatGPT/ChatScreen.dart';
+import '../../chatGPT/ImageGenerator Screen.dart';
+import '../../chatGPT/chatGPT.dart';
+
 class Demopagestate extends StatelessWidget {
   Demopagestate({Key? key}) : super(key: key);
   var control=Get.find<Homecontroller>();
@@ -36,7 +40,7 @@ class Demopagestate extends StatelessWidget {
           EasyLoading.showSuccess("Delete Sucess");
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: 
          BottomAppBar(
           shape: CircularNotchedRectangle(),
@@ -54,6 +58,11 @@ class Demopagestate extends StatelessWidget {
               padding: EdgeInsets.only(left: 10.0.wp),
               child: IconButton(onPressed: (){control.changemypage(1);}, icon: Icon(Icons.data_saver_off_rounded,color: Colors.white,size: 30)),
             ),
+
+              Padding(
+                padding: EdgeInsets.only(left: 10.0.wp),
+                child: IconButton(onPressed: (){control.changemypage(2);}, icon: Icon(Icons.chat,color: Colors.white,size: 30)),
+              ),
           ],)
           ),
       
@@ -62,6 +71,7 @@ class Demopagestate extends StatelessWidget {
         children: [
           Home(),
           Report(),
+          chatGPT(),
         ],
       ),
     );

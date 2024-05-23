@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:labquest/app/core/extensions.dart';
 import 'package:labquest/app/screen/home/widgets/addCard.dart';
 import 'package:labquest/app/screen/home/widgets/taskCard.dart';
@@ -31,48 +32,34 @@ class Home extends GetView<Homecontroller> {
               ),
               ],),
 
-          Padding(
-            padding:  EdgeInsets.symmetric(vertical: 4.0.wp,horizontal: 4.0.wp),
-            child: const Divider(thickness: 2,),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 3.0.wp,horizontal: 5.0.wp),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Obx((){
+            var createdTasks = control.getTotalTask();
+            var completedTasks = control.getTotalDoneTask();
+            var livetasks = createdTasks-completedTasks;
+            var precent=(completedTasks/createdTasks *100).toStringAsFixed(0);
+            return Column(
               children: [
-                status(Colors.red, livetasks, 'Live Tasks', context),
-                status(Colors.green, completedTasks, 'Completed', context),
-                status(Colors.blue, createdTasks, 'Created', context)
-              ],
-            ),
-          ),
-          SizedBox(height:15.0.wp),
-          UnconstrainedBox(
-            child: SizedBox(
-              width: 70.0.wp,
-              height: 70.0.wp,
-              child: CircularStepProgressIndicator(
-                totalSteps: createdTasks==0?1:createdTasks,
-                currentStep: completedTasks,
-                stepSize: 20,
-                selectedColor: Colors.deepPurple,
-                unselectedColor: Colors.grey[200],
-                padding: 0,
-                width:150,
-                height: 150,
-                selectedStepSize: 22,
-                roundedCap: (_,__)=>true,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('${createdTasks==0?0:precent} %',style: Theme.of(context).textTheme.headline4,),
-                    SizedBox(height: 1.0.wp,),
-                    Text("Efficiency",style: Theme.of(context).textTheme.headline2,)
-                  ],
+
+                Padding(
+                  padding:  EdgeInsets.symmetric(vertical: 4.0.wp,horizontal: 4.0.wp),
+                  child: const Divider(thickness: 2,),
                 ),
-              ),
-            ),
-          ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 3.0.wp,horizontal: 5.0.wp),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      status(Colors.red, livetasks, 'Live Tasks', context),
+                      status(Colors.green, completedTasks, 'Completed', context),
+                      status(Colors.blue, createdTasks, 'Created', context)
+                    ],
+                  ),
+                ),
+                SizedBox(height:15.0.wp),
+                             ],
+            );
+          }),
+
           Obx((){
             return GridView.count(
               crossAxisCount: 2,

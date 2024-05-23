@@ -35,7 +35,3 @@ class IntroController extends GetxController {
             "If you completed your task, so you can view the result you work for each day")
   ];
 }
-
-class sharedprefsintro {
-  
-}
