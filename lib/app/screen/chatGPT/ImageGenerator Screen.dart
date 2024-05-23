@@ -34,7 +34,7 @@ class _ChatScreenState extends State<ChatScreen> {
         Uri.parse('https://api.openai.com/v1/chat/completions'),
         headers: <String, String>{
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer sk-proj-I96kscKYYfmOCLAVMGrKT3BlbkFJ5Pm1Nu8iaMviRbOmfF2q',
+          'Authorization': 'Bearer """"',
         },
 
 

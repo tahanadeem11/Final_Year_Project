@@ -18,7 +18,7 @@ class _ImageUploadScreenState extends State<ImageUploadScreen> {
   final List<Map<String, dynamic>> _messages = [];
   File? _image;
   final picker = ImagePicker();
-  final String apiKey = "sk-proj-I96kscKYYfmOCLAVMGrKT3BlbkFJ5Pm1Nu8iaMviRbOmfF2q";
+  final String apiKey = "''''";
 
   Future<void> _getImage(ImageSource source) async {
     final status = await Permission.camera.request();
