@@ -27,8 +27,6 @@ class _ImageUploadScreenState extends State<ImageUploadScreen> {
       if (pickedFile != null) {
         setState(() {
           _image = File(pickedFile.path);
-
-
         });
         _sendImageMessage();
       }
