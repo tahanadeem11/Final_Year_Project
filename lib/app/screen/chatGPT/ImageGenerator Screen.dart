@@ -40,7 +40,7 @@ class _ImageChatScreenState extends State<ImageChatScreen> {
         Uri.parse('https://api.openai.com/v1/images/generate'),
         headers: <String, String>{
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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',
+          'Authorization': '"""',
         },
         body: requestBodyJson,
       );
