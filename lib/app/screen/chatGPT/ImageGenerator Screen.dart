@@ -34,7 +34,7 @@
 //         Uri.parse('https://api.openai.com/v1/chat/completions'),
 //         headers: <String, String>{
 //           'Content-Type': 'application/json',
-//           'Authorization': 'Bearer """"',
+//           'Authorization': 'Bearer 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',
 //         },
 //         body: requestBodyJson,
 //       );

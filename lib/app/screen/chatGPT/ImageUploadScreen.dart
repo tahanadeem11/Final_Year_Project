@@ -1,26 +1,20 @@
 // import 'dart:convert';
 // import 'dart:io';
-//
 // import 'package:flutter/material.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'package:http/http.dart' as http;
 // import 'package:permission_handler/permission_handler.dart';
 //
-//
-//
 // class ImageUploadScreen extends StatefulWidget {
 //   @override
 //   _ImageUploadScreenState createState() => _ImageUploadScreenState();
 // }
-//
 // class _ImageUploadScreenState extends State<ImageUploadScreen> {
 //   final TextEditingController _messageController = TextEditingController();
 //   final List<Map<String, dynamic>> _messages = [];
 //   File? _image;
 //   final picker = ImagePicker();
-//   final String apiKey = "''''";
-
-
+//   final String apiKey = "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";
 //
 //   Future<void> _getImage(ImageSource source) async {
 //     final status = await Permission.camera.request();
@@ -60,13 +54,11 @@
 //       ],
 //       "max_tokens": 300
 //     });
-//
 //     var response = await http.post(
 //       Uri.parse("https://api.openai.com/v1/chat/completions"),
 //       headers: headers,
 //       body: payload,
 //     );
-//
 //     if (response.statusCode == 200) {
 //       var jsonResponse = jsonDecode(response.body);
 //       var aiResponse = jsonResponse['choices'][0]['message']['content'];
@@ -90,12 +82,10 @@
 //       });
 //       _image = null;
 //     });
-//
 //     var headers = {
 //       "Content-Type": "application/json",
 //       "Authorization": "Bearer $apiKey"
 //     };
-//
 //     var payload = jsonEncode({
 //       "model": "gpt-4o",
 //       "messages": [
@@ -114,7 +104,6 @@
 //       headers: headers,
 //       body: payload,
 //     );
-//
 //     if (response.statusCode == 200) {
 //       var jsonResponse = jsonDecode(response.body);
 //       var aiResponse = jsonResponse['choices'][0]['message']['content'];
@@ -196,3 +185,4 @@
 //     );
 //   }
 // }
+//

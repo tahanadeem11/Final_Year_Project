@@ -61,7 +61,9 @@ class MyApp extends StatelessWidget {
       initialBinding: HomeBinding(),
       builder: EasyLoading.init(),
       getPages: [
-        GetPage(name: '/', page: ()=> Intro(),middlewares: [IntroMeddleWare()]),
+        GetPage(name: '/', page: ()=> Intro(),
+
+            middlewares: [IntroMeddleWare()]),
         GetPage(name: '/Demo', page: ()=>Demopagestate())
       ],
     );
