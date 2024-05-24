@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -6,15 +7,20 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 import 'app/data/services/storage/sevices.dart';
 import 'app/middleware/MiddleWare.dart';
+import 'app/screen/AUthentication/login.dart';
 import 'app/screen/home/binding.dart';
 import 'app/screen/home/widgets/demopagestate.dart';
 import 'app/screen/intro/intro.dart';
+import 'firebase_options.dart';
 
 SharedPreferences? preferences;
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   preferences = await SharedPreferences.getInstance();
   await GetStorage.init();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await Get.putAsync(() => StoreService().init());
   runApp(MyApp());
 }
@@ -64,7 +70,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/', page: ()=> Intro(),
 
             middlewares: [IntroMeddleWare()]),
-        GetPage(name: '/Demo', page: ()=>Demopagestate())
+        GetPage(name: '/Demo', page: ()=>Demopagestate()),
+        GetPage(name: '/SignInScreen', page: ()=>SignInScreen())
       ],
     );
   }

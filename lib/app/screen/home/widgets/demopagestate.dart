@@ -9,7 +9,7 @@ import 'package:labquest/controller/homecontroller.dart';
 import 'package:labquest/model/task.dart';
 
 import '../../chatGPT/ImageUploadScreen.dart';
-import '../../chatGPT/ImageGenerator Screen.dart';
+import '../../chatGPT/ChatScreen.dart';
 import '../../chatGPT/chatGPT.dart';
 
 class Demopagestate extends StatelessWidget {

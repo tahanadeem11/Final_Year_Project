@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:get/get_core/src/get_main.dart';
 import 'ImageUploadScreen.dart';
-import 'ImageGenerator Screen.dart';
+import 'ChatScreen.dart';
 class chatGPT extends StatefulWidget {
   const chatGPT({super.key});
   @override

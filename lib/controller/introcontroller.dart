@@ -5,6 +5,8 @@ import 'package:labquest/app/screen/home/widgets/demopagestate.dart';
 import 'package:labquest/main.dart';
 import 'package:labquest/model/introcontent.dart';
 
+import '../app/screen/AUthentication/login.dart';
+
 class IntroController extends GetxController {
   RxInt currentIndex = 0.obs;
   PageController pagecontroller = PageController();
@@ -12,7 +14,7 @@ class IntroController extends GetxController {
   actionbutton() {
     if (currentIndex.value == contents.length - 1) {
       preferences!.setBool(DISPLAYINTRO, true);
-      Get.off(()=>Demopagestate());
+      Get.off(()=>SignInScreen());
     }
     pagecontroller.nextPage(duration: 800.milliseconds, curve: Curves.ease);
   }
