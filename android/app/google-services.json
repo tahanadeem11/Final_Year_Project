@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "636512754707",
+    "project_id": "labquest-c735f",
+    "storage_bucket": "labquest-c735f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636512754707:android:8748b466bc1230912df3e6",
+        "android_client_info": {
+          "package_name": "com.example.labquest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636512754707-44jfvv7bql6bkmlebjgtiho1c81s4j04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeohanPV-VwDyp86bhVhbsJSdJgjTHhwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636512754707-44jfvv7bql6bkmlebjgtiho1c81s4j04.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
