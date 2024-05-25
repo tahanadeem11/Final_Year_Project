@@ -1,10 +1,17 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:labquest/Quiz/classes/status_tracker_class.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
+import 'Quiz/screens/done_screen.dart';
+import 'Quiz/screens/home_page.dart';
+import 'Quiz/screens/quiz_page.dart';
+import 'Quiz/screens/results_page.dart';
+import 'Quiz/screens/splash_screen.dart';
+import 'Quiz/screens/welcome_page1.dart';
 import 'app/data/services/storage/sevices.dart';
 import 'app/middleware/MiddleWare.dart';
 import 'app/screen/AUthentication/login.dart';
@@ -28,7 +35,7 @@ main() async {
   await Get.putAsync(() => StoreService().init());
   runApp(MyApp());
 }
-
+StatusTrackerClass statusObject = StatusTrackerClass();
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -82,11 +89,9 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/Home', page: ()=>Home()),
         GetPage(name: '/Report', page: ()=>Report()),
         GetPage(name: '/chatGPT', page: ()=>chatGPT()),
-
-      
-
-
       ],
+
+
     );
   }
 }

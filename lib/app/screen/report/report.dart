@@ -5,6 +5,9 @@ import 'package:labquest/app/core/extensions.dart';
 import 'package:labquest/controller/homecontroller.dart';
 import 'package:intl/intl.dart';
 
+import '../../../Quiz/screens/welcome_page1.dart';
+import '../home/QuziController/Quiz Screen.dart';
+
 class Report extends StatelessWidget {
   Report({Key? key}) : super(key: key);
   final control=Get.find<Homecontroller>();
@@ -74,6 +77,35 @@ class Report extends StatelessWidget {
                         SizedBox(height: 1.0.wp,),
                         Text("Efficiency",style: Theme.of(context).textTheme.displayMedium,)
                       ],
+                    ),
+                  ),
+                  
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => WelcomePage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Container(
+                    height: 50,
+                    width: 200,
+                   decoration: BoxDecoration(
+                     color: Colors.black,
+                     borderRadius: BorderRadius.circular(20)
+                   ),
+                    child: Center(
+                      child: Text("Start Quiz",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20
+
+                      ),
+                      ),
                     ),
                   ),
                 ),
