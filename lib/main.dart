@@ -8,9 +8,13 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'app/data/services/storage/sevices.dart';
 import 'app/middleware/MiddleWare.dart';
 import 'app/screen/AUthentication/login.dart';
+import 'app/screen/AUthentication/sign_up.dart';
+import 'app/screen/chatGPT/chatGPT.dart';
 import 'app/screen/home/binding.dart';
+import 'app/screen/home/home.dart';
 import 'app/screen/home/widgets/demopagestate.dart';
 import 'app/screen/intro/intro.dart';
+import 'app/screen/report/report.dart';
 import 'firebase_options.dart';
 
 SharedPreferences? preferences;
@@ -71,7 +75,15 @@ class MyApp extends StatelessWidget {
 
             middlewares: [IntroMeddleWare()]),
         GetPage(name: '/Demo', page: ()=>Demopagestate()),
-        GetPage(name: '/SignInScreen', page: ()=>SignInScreen())
+        GetPage(name: '/SignInScreen', page: ()=>SignInScreen()),
+        GetPage(name: '/SignUpScreen', page: ()=>SignUpScreen()),
+        GetPage(name: '/Home', page: ()=>Home()),
+        GetPage(name: '/Report', page: ()=>Report()),
+        GetPage(name: '/chatGPT', page: ()=>chatGPT()),
+
+      
+
+
       ],
     );
   }
