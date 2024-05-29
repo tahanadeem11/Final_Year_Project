@@ -7,6 +7,7 @@ import 'package:intl/intl.dart';
 
 import '../../../Quiz/screens/welcome_page1.dart';
 import '../home/QuziController/Quiz Screen.dart';
+import 'SubmissionForm.dart';
 
 class Report extends StatelessWidget {
   Report({Key? key}) : super(key: key);
@@ -88,6 +89,34 @@ class Report extends StatelessWidget {
               InkWell(
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => WelcomePage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Container(
+                    height: 50,
+                    width: 200,
+                   decoration: BoxDecoration(
+                     color: Colors.black,
+                     borderRadius: BorderRadius.circular(20)
+                   ),
+                    child: Center(
+                      child: Text("Start Quiz",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20
+
+                      ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => SubmissionForm()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
